@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>KRIPTONIK --- To Protect Your Privacy</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <script type="text/javascript" src="js/Javascrypt/externalLinks.js"></script>
+    <script type="text/javascript" src="js/Javascrypt/aes.js"></script>
+    <script type="text/javascript" src="js/Javascrypt/entropy.js"></script>
+    <script type="text/javascript" src="js/Javascrypt/aesprng.js"></script>
+    <script type="text/javascript" src="js/Javascrypt/lecuyer.js"></script>
+    <script type="text/javascript" src="js/Javascrypt/md5.js"></script>
+    <script type="text/javascript" src="js/Javascrypt/armour.js"></script>
+    <script type="text/javascript" src="js/Javascrypt/utf-8.js"></script>
+    <script type="text/javascript" src="js/Javascrypt/jscrypt.js"></script>
+    <script type="text/javascript" src="js/Javascrypt/index.js"></script>
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/new-age.min.css" rel="stylesheet">
+    <!-- +FULL -->
+    <script type="text/javascript">
+        <!--
+                          /*  Test jig for code activated by the "Test" button when the
+                              debugging console is activated.  */
+        
+                          function TestSomething() {
+                          }
+        
+                      // -->
+    </script>
+    <!-- -FULL -->
+    <script type="text/javascript">
+        <!--
+        
+                          //  Our onLoad handler kicks off the collection of entropy
+        
+                          function nowLoaded() {
+                              ce();                           // Add time we got here to entropy
+                              mouseMotionEntropy(60);         // Initialise collection of mouse motion entropy
+                          }
+                      // -->
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container"> <a class="navbar-brand js-scroll-trigger" href="index.html">KRIPTONIK.IO</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i>
+            </button>
+             <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="Encrypt.html">Encrypt</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="Decrypt.html">Decrypt</a>
+            </li>
+          </ul>
+        </div>
+        </div>
+    </nav>
+    <header class="masthead">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-lg-7 my-auto">
+                    <div class="header-content mx-auto">
+                        <h1 class="mb-5">High-Security Data encryption solution which runs entirely in your Web Browser.</h1>
+                        <!--               <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Start Now for Free!</a>
+ -->
+                    </div>
+                </div>
+                <div class="col-lg-5 my-auto">
+                    <div class="device-container">
+                        <div class="device-mockup iphone6_plus portrait white">
+                            <div class="device">
+                                <div class="screen">
+                                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                                    <img src="img/demo-screen-1.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="button">
+                                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2>Decrypt</h2>
+                <p class="text-muted">The sole reason for encryption is to protect privacy.</p>
+                <hr>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-lg-12 my-auto">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12 text-center">
+                                    
+                                    <form id="key" action="#" onsubmit="return false;">
+                                        <label for="inputPassword5">Key</label> <small id="passwordHelpBlock" class="form-text text-muted">Your Key must be provide before derypt.</small>
+                                        <input id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" type="text" name="text" size="80" maxlength="1024" style=" font-family: monospace;" onfocus="ce();" onblur="ce();" onkeydown="ce();">
+                                        <div class="divider"></div>
+                                        <label>
+                                            <input type="radio" checked="checked" name="keytype" />&nbsp;Text</label>&nbsp;
+                                        <label>
+                                            <input type="radio" name="keytype" />&nbsp;Hexadecimal</label>&nbsp;
+                                        <input type="button" value=" Generate " onclick="Generate_key();" />&nbsp;
+                                        <input type="button" value=" Clear " onclick="document.getElementById('key').text.value = '';" />&nbsp;
+                                        <input type="button" value=" Select " onclick="document.getElementById('key').text.select();" />
+                                    </form>
+                                    
+                                    <div class="divider"></div>
+                                    
+                                    <form id="cipher" action="#" onsubmit="return false;">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlTextarea1 text-center">Input</label>
+                                            <textarea name="text" rows="5" cols="80" style="" onfocus="ce();" onblur="ce();" onkeydown="ce();" class="form-control" id="exampleFormControlTextarea1"></textarea>
+                                        </div>
+                                        <input type="button" name="decrypt" value=" Decrypt " onclick="Decrypt_text();" />&nbsp;
+                                        <input type="button" value=" Clear " onclick="document.getElementById('cipher').text.value = '';" />&nbsp;
+                                        <input type="button" value=" Select " onclick="document.getElementById('cipher').text.select();" />
+                                    </form>
+                                    <div class="divider"></div>
+                                    <form id="plain" action="#" onsubmit="return false;">
+                                       
+                                       <div class="form-group">
+                                            <label for="exampleFormControlTextarea1 text-center">Output</label>
+                                            <textarea name="text" rows="5" cols="80" style="" onfocus="ce();" onblur="ce();" onkeydown="ce();" class="form-control" id="exampleFormControlTextarea1"></textarea>
+                                        </div>
+                                        <!--                                             <input type="button" name="encrypt" value=" Encrypt "
+                                                onclick="Encrypt_text();" /> -->&nbsp;
+                                        <input type="button" value=" Clear " onclick="document.getElementById('plain').text.value = '';" />&nbsp;
+                                        <input type="button" value=" Select " onclick="document.getElementById('plain').text.select();" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; Your Website 2018. All Rights Reserved.</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"> <a href="#">Privacy</a>
+                </li>
+                <li class="list-inline-item"> <a href="#">Terms</a>
+                </li>
+                <li class="list-inline-item"> <a href="#">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        <!--
+            /*  Dump one or more (variable_name, value) pairs given as arguments
+                to the function.  */
+        
+            function dump()
+            {
+                var t = "", i;
+        
+                for (i = 0; i < arguments.length; i += 2) {
+                    if (t.length > 0) {
+                        t += ", ";
+                    }
+                    t += arguments[i] + " = " + arguments[i + 1];
+                }
+                document.getElementById("debug").log.value += t + "\n";
+            }
+    </script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/new-age.min.js"></script>
+</body>
+
+</html>
